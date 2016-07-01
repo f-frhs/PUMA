@@ -15,6 +15,15 @@ function output=Rotx(alpha_deg)
         0,          0,           0, 1]
 endfunction
 
+function output=Roty(theta_deg)
+    theta = theta_deg * %pi / 180
+    output = [...
+         cos(theta), 0, sin(theta), 0;
+                  0, 1,          0, 0;
+        -sin(theta), 0, cos(theta), 0;
+                  0, 0,          0, 1]
+endfunction
+
 function output=Rotz(theta_deg)
     theta = theta_deg * %pi / 180
     output = [...

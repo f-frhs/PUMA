@@ -40,4 +40,13 @@ function output = calc_theta123_from_hand_pos(px,py,pz)
     end
 endfunction
 
-disp(calc_theta123_from_hand_pos(px,py,pz)*180/%pi)
+function output = rotation_matrix_from_euler_angle(phi, theta, psi)
+    output = Rotz(phi) * Rotx(theta) * Rotz(psi)
+endfunction
+
+
+//disp(calc_theta123_from_hand_pos(px,py,pz)*180/%pi)
+
+disp(rotation_matrix_from_euler_angle( 0, 0, 0))
+disp(rotation_matrix_from_euler_angle(90, 0, 0))
+
