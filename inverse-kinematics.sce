@@ -1,3 +1,5 @@
+exec('utilities.sci', -1)
+
 // 目標のハンド座標
 px= 2
 py= 1
